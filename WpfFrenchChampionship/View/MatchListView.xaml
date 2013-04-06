@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="WpfFrenchChampionship.View.MatchListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <ListView ItemsSource="{Binding Matches}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="100" Header="Home" DisplayMemberBinding="{Binding Home}" />
+                    <GridViewColumn Width="100" Header="HomeGoals" DisplayMemberBinding="{Binding HomeGoals}"/>
+                    <GridViewColumn Width="100" Header="AwayGoals" DisplayMemberBinding="{Binding AwayGoals}" />
+                    <GridViewColumn Width="100" Header="Away" DisplayMemberBinding="{Binding Away}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</UserControl>

@@ -1,0 +1,20 @@
+﻿<Window xmlns:my1="clr-namespace:WpfFrenchChampionship.View"  xmlns:my="clr-namespace:WpfFrenchChampionship"  x:Class="WpfFrenchChampionship.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Championnat Français" Height="355" Width="574">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel LastChildFill="True">
+            <Label DockPanel.Dock="Top" HorizontalAlignment="Center">Matchs</Label>
+            <my:MatchEditView DockPanel.Dock="Top" x:Name="matchEditView" Loaded="matchEditView_Loaded" />
+            <my1:MatchListView x:Name="matchListView"/>
+            <!--"<Label HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">TODO : Mettre la vue  MatchListView à la place de ce label</Label>-->
+        </DockPanel>
+        <my:RankingView Grid.Column="1" x:Name="rankingView"/>
+    </Grid>
+</Window>
